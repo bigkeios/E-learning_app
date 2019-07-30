@@ -4,8 +4,17 @@
         <li class="nav-item">
             <a class="nav-link" href="<%= root_path%>"> Home </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="<%= signup_path %>"> Sign up </a>
-        </li>
+        <% if !logged_in? %>
+            <li class="nav-item">
+                <a class="nav-link" href="<%= signup_path %>"> Sign up </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%= login_path %>"> Log in </a>
+            </li>
+        <% else %>
+            <li class="nav-item">
+                <%= link_to "Log out", logout_path, method: "delete", class: 'nav-link'%>
+            </li>
+        <% end %>    
     </ul>
 </nav>
