@@ -12,6 +12,10 @@ class UsersController < ApplicationController
             render :new
         end
     end
+    # GET users/1
+    def show
+        @user = User.find_by(id: params[:id])
+    end
 
     private
         def user_params
