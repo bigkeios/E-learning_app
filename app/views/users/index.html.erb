@@ -1,0 +1,13 @@
+<% provide(:title, 'Users List')%>
+<h1> All users </h1>
+<%= will_paginate @users %>
+<ul class="users col-md-6">
+    <% @users.each do |user| %>
+        <li>
+            <%= link_to user.name, user_url(user) %>
+        </li>
+        
+    <% end %>
+        
+</ul>
+<%= will_paginate @users %>

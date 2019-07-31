@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by(id: params[:id])
     end
+    # GET users
+    def index
+        @users = User.paginate(page: params[:page], per_page: 20)
+    end
 
     private
         def user_params
