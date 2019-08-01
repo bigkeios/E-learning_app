@@ -1,13 +1,18 @@
 <% provide(:title, 'Users List')%>
 <h1> All users </h1>
-<%= will_paginate @users %>
-<ul class="users col-md-6">
-    <% @users.each do |user| %>
-        <li>
-            <%= link_to user.name, user_path(user) %>
-        </li>
-        
-    <% end %>
-        
-</ul>
-<%= will_paginate @users %>
+<div class="container">
+    <div class="row">
+        <div class= "col-md-10 offset-md-1">
+            <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+            <ul class="users">
+                <% @users.each do |user| %>
+                    <li>
+                        <%= link_to user.name, user_path(user) %>
+                    </li>
+                    
+                <% end %>
+            </ul>
+            <%= will_paginate @users %>
+        </div>
+    </div>
+</div>
