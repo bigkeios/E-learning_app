@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     include SessionsHelper
     before_action :logged_in_user?, only: [:show, :index, :edit, :update]
+    before_action :correct_user? only: [:edit, :update]
 
     # GET users/new
     def new
@@ -42,5 +43,9 @@ class UsersController < ApplicationController
     private
         def user_params
             params.require(:user).permit(:name, :email, :password, :password_confirmation)
+        end
+        def correct_user?
+            @user = User.find_by(id: params[:id])
+            redirect_to root_path if current_user != @user
         end
 end
