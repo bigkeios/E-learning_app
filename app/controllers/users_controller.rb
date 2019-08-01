@@ -39,13 +39,20 @@ class UsersController < ApplicationController
             render :edit
         end
     end
+
+    # DELETE users/1
+    def destroy
+        @user = User.find_by(id: params[:id]).destroy
+        flash[:success] = "Delete the user successfully"
+        redirect_to users_path
+    end
     
     private
         def user_params
             params.require(:user).permit(:name, :email, :password, :password_confirmation)
         end
-        def correct_user?
-            @user = User.find_by(id: params[:id])
-            redirect_to root_path if current_user != @user
-        end
+        # def correct_user?
+        #     @user = User.find_by(id: params[:id])
+        #     redirect_to root_path if current_user != @user
+        # end
 end
