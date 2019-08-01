@@ -1,0 +1,3 @@
+vi:
+  hello: "Chào thế giới"
+  invalid_email_password: "Email hoặc mật khẩu không đúng"
