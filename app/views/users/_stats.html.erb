@@ -1,3 +1,5 @@
-<strong> <%= @user.followed_users.count%> </strong> followings
+<%= t(:following) %>
+<strong> <%= @user.followed_users.count%> </strong>
 <br>
-<strong> <%= @user.following_users.count%> </strong> followers
+<%= t(:follower) %>
+<strong> <%= @user.following_users.count%> </strong>

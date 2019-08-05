@@ -1,13 +1,13 @@
-<% provide(:title, 'Users List')%>
-<h1> All users </h1>
+<% provide(:title, t(:other_user))%>
+<h1> <%= t(:other_user) %> </h1>
 <div class="container">
   <div class="row">
     <div class= "col-md-10 offset-md-1">
-      <%= will_paginate @users, previous_label: 'Previous', next_label: 'Next', renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
       <ul class="users">
           <%= render @users %>
       </ul>
-      <%= will_paginate @users, previous_label: 'Previous', next_label: 'Next', renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </div>
   </div>
 </div>

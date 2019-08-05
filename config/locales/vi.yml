@@ -6,7 +6,20 @@ vi:
   log_out: "Đăng xuất"
   new_to_website: "Chưa có tài khoản? "
   create_acc: "Tạo tài khoản"
+  edit_acc: "Sửa thông tin tài khoản"
+  delete_acc: "Xóa tài khoản"
   error: "Có lỗi!"
+  my_profile: "Tài khoản cá nhân"
+  other_user: "Danh sách người dùng"
+  follow: "Theo dõi"
+  unfollow: "Hủy theo dõi"
+  following: "Số người đang theo dõi"
+  follower: "Số người theo dõi"
+
+  will_paginate:
+    previous_label: "&#8592; Trang trước"
+    next_label: "Trang tiếp &#8594;"
+    page_gap: "&hellip;"
 
   activerecord:
     attributes:
