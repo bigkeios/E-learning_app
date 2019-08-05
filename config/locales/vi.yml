@@ -6,6 +6,7 @@ vi:
   log_out: "Đăng xuất"
   new_to_website: "Chưa có tài khoản? "
   create_acc: "Tạo tài khoản"
+  error: "Có lỗi!"
 
   activerecord:
     attributes:
@@ -14,7 +15,7 @@ vi:
         email: "Địa chỉ email"
         password: "Mật khẩu"
         password_confirmation: "Nhập lại mật khẩu"
-  
+
   helpers:
     label:
       session:
