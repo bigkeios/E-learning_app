@@ -5,17 +5,17 @@
       <a class="nav-link" href="<%= root_path%>"> Home </a>
     </li>
     
-    <% if !logged_in? %>
+    <% if logged_in? %>
+      <li class="nav-item">
+        <%= link_to t(:log_out), logout_path, method: "delete", class: 'nav-link'%>
+      </li>
+    <% else %>
       <li class="nav-item">
         <%= link_to t(:sign_up), signup_path, class: "nav-link" %>
       </li>
 
       <li class="nav-item">
         <%= link_to t(:log_in), login_path, class: "nav-link" %>
-      </li>
-    <% else %>
-      <li class="nav-item">
-        <%= link_to t(:log_out), logout_path, method: "delete", class: 'nav-link'%>
       </li>
     <% end %>    
   </ul>
