@@ -48,11 +48,8 @@ class UsersController < ApplicationController
     end
     
     private
+    
         def user_params
-            params.require(:user).permit(:name, :email, :password, :password_confirmation)
+            params.require(:user).permit User::USER_PARAMS
         end
-        # def correct_user?
-        #     @user = User.find_by(id: params[:id])
-        #     redirect_to root_path if current_user != @user
-        # end
 end

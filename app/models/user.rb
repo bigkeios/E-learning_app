@@ -4,12 +4,14 @@ class User < ApplicationRecord
     has_many :followeds, class_name: "UserFollow", foreign_key:"followed_id", dependent: :destroy
     has_many :following_users, through: :followeds, source: :follower
 
+    USER_PARAMS = %i[name email password password_confirmation].freeze
     #treat email as unique but ignore case
     before_save :downcase_email 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :name, presence: true, length: {maximum:255}
     #treat email as unique but ignore case
-    validates :email, presence: true, length: {maximum: 255}, format: { with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+    validates(:email, presence: true, length: { maximum: 255 }, format: { with:
+    VALID_EMAIL_REGEX }, uniqueness: true)
     #allow_nil is for edit info
     validates :password, length: {minimum:5}, allow_nil: true
     #this will validate presence of password
@@ -27,8 +29,9 @@ class User < ApplicationRecord
         self.followed_users.include?(other_user)
     end
 
-    private
-    def downcase_email
-        self.email = email.downcase
-    end
+  private
+
+  def downcase_email
+    self.email = email.downcase
+  end
 end
