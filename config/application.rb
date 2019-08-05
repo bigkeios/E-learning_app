@@ -12,7 +12,7 @@ module ELearningApp
     config.load_defaults 6.0
     # Whitelist locales available for the application
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-    config.i18n.available_locales = [:en, :vi]
+    config.i18n.available_locales = %i[en vi]
     # Set default locale to something other than :en
     config.i18n.default_locale = :en
     # Settings in config/environments/* take precedence over those specified here.
