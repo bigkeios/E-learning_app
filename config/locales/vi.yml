@@ -1,3 +1,22 @@
 vi:
-  hello: "Chào thế giới"
+  hello: "Xin chào"
   invalid_email_password: "Email hoặc mật khẩu không đúng"
+  log_in: "Đăng nhập"
+  sign_up: "Tạo tài khoản"
+  log_out: "Đăng xuất"
+  new_to_website: "Chưa có tài khoản? "
+  create_acc: "Tạo tài khoản"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+  
+  helpers:
+    label:
+      session:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"

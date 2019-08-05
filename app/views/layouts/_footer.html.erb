@@ -1,14 +1,24 @@
 <footer class="footer">
+  <div class="footer-left">
     <small> Made with Ruby on Rails </small>
-    <ul>
-        <li>
-            <a href="<%= about_path %>"> About </a>
-        </li>
-        <li>
-            <a href="<%= help_path %>"> Help </a>
-        </li>
-        <li>
-            <a href="<%= news_path %>"> News </a>
-        </li>
-    </ul>
+
+    <br>
+    
+    <%= link_to "English", locale:"en" %>
+    <%= link_to "Tiếng Việt", locale:"vi" %>
+  </div>
+  
+  <ul>
+    <li>
+        <a href="<%= about_path %>"> About </a>
+    </li>
+
+    <li>
+        <a href="<%= help_path %>"> Help </a>
+    </li>
+
+    <li>
+        <a href="<%= news_path %>"> News </a>
+    </li>
+  </ul>
 </footer>
