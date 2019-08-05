@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope '(:locale)', locale: /en|vi/ do
     root 'static_pages#home'
@@ -12,6 +11,6 @@ Rails.application.routes.draw do
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'
     resources :users
-    resources :user_follows, only: [:create, :destroy]
+    resources :user_follows, only: %i[create destroy]
   end
 end
