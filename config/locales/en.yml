@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello"
+  invalid_email_password: "Invalid email or password"
+  log_in: "Log in"
+  sign_up: "Sign up"
+  log_out: "Log out"
+  new_to_website: "New to the website? "
+  create_acc: "Create a new account"

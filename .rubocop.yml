@@ -1,0 +1,3 @@
+# Don't do it, unless the memory usage doesn't matter!!!
+Style/FrozenStringLiteralComment:
+  Enabled: false
