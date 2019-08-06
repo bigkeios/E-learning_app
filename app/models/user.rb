@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  has_many :followings, class_name: "UserFollow", foreign_key: "follower_id",
-                        dependent: :destroy
+  has_many :followings, class_name: UserFollow.model_name,
+                        foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :followings, source: :followed
-  has_many :followeds, class_name: "UserFollow", foreign_key: "followed_id",
-                       dependent: :destroy
+  has_many :followeds, class_name: UserFollow.model_name,
+                       foreign_key: "followed_id", dependent: :destroy
   has_many :following_users, through: :followeds, source: :follower
 
   USER_PARAMS = %i[name email password password_confirmation].freeze
