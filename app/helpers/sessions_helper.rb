@@ -18,7 +18,7 @@ module SessionsHelper
 
   def logged_in_user?
     return if logged_in?
-    flash[:danger] = t :flsh_log_in_first
+    flash[:danger] = t :log_in_first
     redirect_to login_path
   end
 

@@ -13,19 +13,19 @@ vi:
   other_user: "Danh sách người dùng"
   follow: "Theo dõi"
   unfollow: "Hủy theo dõi"
-  following: "Số người đang theo dõi"
-  follower: "Số người theo dõi"
+  following: "Đang theo dõi"
+  follower: "Được theo dõi"
   home: "Trang chủ"
 
   # Flashes
-  flsh_invalid_email_password: "Email hoặc mật khẩu không đúng"
-  flsh_log_in_first: "Hãy đăng nhập trước"
-  flsh_updated_info: "Thông tin đã được cập nhật"
+  invalid_email_password: "Email hoặc mật khẩu không đúng"
+  log_in_first: "Hãy đăng nhập trước"
+  updated_info: "Thông tin đã được cập nhật"
 
   # User error flashes
-  flsh_no_user: "Không tìm thấy người dùng yêu cầu"
-  flsh_delete_user_succ: "Tài khoản đã được xóa"
-  flsh_delete_user_fail: "Đã gặp lỗi khi xóa tài khoản"
+  no_user: "Không tìm thấy người dùng yêu cầu"
+  delete_user_succ: "Tài khoản đã được xóa"
+  delete_user_fail: "Đã gặp lỗi khi xóa tài khoản"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"
