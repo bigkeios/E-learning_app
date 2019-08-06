@@ -31,7 +31,6 @@
 
 en:
   hello: "Hello"
-  invalid_email_password: "Invalid email or password"
   log_in: "Log in"
   sign_up: "Sign up"
   log_out: "Log out"
@@ -48,6 +47,16 @@ en:
   following: "Followings"
   follower: "Followers"
   home: "Home"
+
+  # Flashes
+  flsh_invalid_email_password: "Invalid email or password"
+  flsh_log_in_first: "Please log in first"
+  flsh_updated_info: "Updated information"
+
+  # User error flashes
+  flsh_no_user: "The specified user does not exist"
+  flsh_delete_user_succ: "The user was deleted successfully"
+  flsh_delete_user_fail: "There was an error deleting user"
 
   will_paginate:
     previous_label: "&#8592; Previous"

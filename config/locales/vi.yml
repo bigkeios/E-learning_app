@@ -1,6 +1,5 @@
 vi:
   hello: "Xin chào"
-  invalid_email_password: "Email hoặc mật khẩu không đúng"
   log_in: "Đăng nhập"
   sign_up: "Tạo tài khoản"
   log_out: "Đăng xuất"
@@ -17,6 +16,16 @@ vi:
   following: "Số người đang theo dõi"
   follower: "Số người theo dõi"
   home: "Trang chủ"
+
+  # Flashes
+  flsh_invalid_email_password: "Email hoặc mật khẩu không đúng"
+  flsh_log_in_first: "Hãy đăng nhập trước"
+  flsh_updated_info: "Thông tin đã được cập nhật"
+
+  # User error flashes
+  flsh_no_user: "Không tìm thấy người dùng yêu cầu"
+  flsh_delete_user_succ: "Tài khoản đã được xóa"
+  flsh_delete_user_fail: "Đã gặp lỗi khi xóa tài khoản"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"

@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # GET users/1
   def show
     unless @user
-      flash[:danger] = "The specified user does not exist"
+      flash[:danger] = t :flsh_no_user
       redirect_to root_path
     end
   end
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   # POST users/1/edit
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Updated information"
+      flash[:success] = t :flsh_updated_info 
       redirect_to user_path(@user)
     else
       render :edit
@@ -49,9 +49,9 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     if @user.destroyed?
-      flash[:success] = "The user was deleted successfully"
+      flash[:success] = t :flsh_delete_user_succ
     else
-      flash[:danger] = "There was an error deleting user"
+      flash[:danger] = t :flsh_delete_user_fail
     end
     redirect_to users_path
   end
