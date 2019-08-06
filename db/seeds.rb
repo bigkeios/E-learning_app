@@ -10,8 +10,8 @@
   name = Faker::Name.name
   email = Faker::Internet.unique.email
   password = 'password'
-  User.create(name: name, email: email, password: password, 
-  password_confirmation: password)
+  User.create(name: name, email: email, password: password,
+              password_confirmation: password)
 end
 # FOLLOWING
 users = User.all

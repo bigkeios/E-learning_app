@@ -1,6 +1,6 @@
 class UserFollowsController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user?, only: %i[show index edit update]
+  before_action :logged_in_user?, only: %i[create destroy]
   # POST user_follows/
   def create
     user = User.find_by(id: params[:followed_id])

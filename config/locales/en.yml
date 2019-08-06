@@ -39,6 +39,7 @@ en:
   create_acc: "Create a new account"
   edit_acc: "Edit information"
   delete_acc: "Delete"
+  cf_delete_user: "Are you sure you want to delete this user?"
   error: "Something is wrong"
   my_profile: "My profile"
   other_user: "Users list"
@@ -46,6 +47,8 @@ en:
   unfollow: "Unfollow"
   following: "Followings number"
   follower: "Followers number"
+  home: "Home"
+
   will_paginate:
     previous_label: "&#8592; Previous"
     next_label: "Next &#8594;"

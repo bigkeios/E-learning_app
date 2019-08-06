@@ -1,25 +1,25 @@
-<% provide(:title, @user.name)%>
-<div class="container">
+<% provide(:title, @user.name) %>
+<div class= "container">
   <div class="row">
     <div class="col-md-10">
       <div class="info">
         <strong> Email: </strong> <%= @user.email %>
         <br>
         <% if logged_in? %>
-          <% if current_user == @user%>
+          <% if current_user == @user %>
             <%= link_to t(:edit_acc), edit_user_path(@user) %>
           <% else %>
             <% if current_user.following?(@user) %>
-              <%= render 'unfollow' %>
+              <%= render "unfollow" %>
             <% else %>
-              <%= render 'follow' %>
+              <%= render "follow" %>
             <% end %>
           <% end %>
         <% end %>
       </div>
       <div class="name">
         <h2> <%= @user.name %> </h2>
-        <%= render 'stats' %>
+        <%= render "stats" %>
       </div>
     </div>
   </div>

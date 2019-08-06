@@ -8,6 +8,7 @@ vi:
   create_acc: "Tạo tài khoản"
   edit_acc: "Sửa thông tin tài khoản"
   delete_acc: "Xóa tài khoản"
+  cf_delete_user: "Bạn có chắc là muốn xóa tài khoản này?"
   error: "Có lỗi!"
   my_profile: "Tài khoản cá nhân"
   other_user: "Danh sách người dùng"
@@ -15,6 +16,7 @@ vi:
   unfollow: "Hủy theo dõi"
   following: "Số người đang theo dõi"
   follower: "Số người theo dõi"
+  home: "Trang chủ"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"
