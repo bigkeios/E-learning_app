@@ -45,8 +45,8 @@ en:
   other_user: "Users list"
   follow: "Follow"
   unfollow: "Unfollow"
-  following: "Followings number"
-  follower: "Followers number"
+  following: "Followings"
+  follower: "Followers"
   home: "Home"
 
   will_paginate:

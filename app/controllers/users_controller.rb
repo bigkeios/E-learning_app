@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   include SessionsHelper
   before_action :logged_in_user?, only: %i[show index edit update]
   before_action :correct_user?, only: %i[edit update]
+  before_action :set_user, only: %i[show edit update destroy]
 
   # GET users/new
   def new
@@ -20,7 +21,10 @@ class UsersController < ApplicationController
 
   # GET users/1
   def show
-    @user = User.find_by(id: params[:id])
+    unless @user
+      flash[:danger] = "The specified user does not exist"
+      redirect_to root_path
+    end
   end
 
   # GET users
@@ -29,13 +33,10 @@ class UsersController < ApplicationController
   end
 
   # GET users/1/edit
-  def edit
-    @user = User.find_by(id: params[:id])
-  end
+  def edit; end
 
   # POST users/1/edit
   def update
-    @user = User.find_by(id: params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Updated information"
       redirect_to user_path(@user)
@@ -46,8 +47,12 @@ class UsersController < ApplicationController
 
   # DELETE users/1
   def destroy
-    @user = User.find_by(id: params[:id]).destroy
-    flash[:success] = "Delete the user successfully"
+    @user.destroy
+    if @user.destroyed?
+      flash[:success] = "The user was deleted successfully"
+    else
+      flash[:danger] = "There was an error deleting user"
+    end
     redirect_to users_path
   end
 
@@ -55,5 +60,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USER_PARAMS
+  end
+
+  def set_user
+    @user = User.find_by(id: params[:id])
+    return unless @user
   end
 end

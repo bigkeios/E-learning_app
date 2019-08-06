@@ -3,7 +3,7 @@ class User < ApplicationRecord
                         dependent: :destroy
   has_many :followed_users, through: :followings, source: :followed
   has_many :followeds, class_name: "UserFollow", foreign_key: "followed_id",
-                        dependent: :destroy
+                       dependent: :destroy
   has_many :following_users, through: :followeds, source: :follower
 
   USER_PARAMS = %i[name email password password_confirmation].freeze
@@ -20,15 +20,15 @@ class User < ApplicationRecord
   # this will validate presence of password
   has_secure_password
 
-  def follow(other_user)
+  def follow other_user
     followings.create(followed_id: other_user.id)
   end
 
-  def unfollow(other_user)
+  def unfollow other_user
     followings.find_by(followed_id: other_user.id).destroy
   end
 
-  def following?(other_user)
+  def following? other_user
     followed_users.include?(other_user)
   end
 
