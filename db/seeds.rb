@@ -3,16 +3,19 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create(name: "Luke", movie: movies.first)
 # USERS
-50.times do
+User.create(name: "admin", email: "admin@example.org", password: "password",
+            password_confirmation: "password", admin: true)
+50.times do |i|
   name = Faker::Name.name
-  email = Faker::Internet.unique.email
-  password = 'password'
+  email = "example_#{i+1}@example.org"
+  password = "password"
   User.create(name: name, email: email, password: password,
               password_confirmation: password)
 end
+
 # FOLLOWING
 users = User.all
 user = users.first
@@ -23,4 +26,11 @@ followed_users.each do |flwed_user|
 end
 following_users.each do |flwing_user|
   flwing_user.follow(user)
+end
+
+# COURSE
+10.times do
+  name = Faker::Lorem.sentence
+  desc = Faker::Lorem.paragraph(sentence_count: 4)
+  Course.create(name: name, desc: desc)
 end
