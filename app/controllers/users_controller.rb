@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[show index edit update]
   before_action :correct_user, only: %i[edit update]
   before_action :set_user, only: %i[show edit update destroy]
+  before_action :admin_user, :admin_delete, only: %i[destroy]
 
   # GET users/new
   def new
@@ -60,6 +61,13 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     unless @user
       flash[:danger] = t :no_user
+      redirect_to root_path
+    end
+  end
+
+  def admin_delete
+    unless !correct_user && admin?
+      flash[:danger] = t :no_delete_admin
       redirect_to root_path
     end
   end

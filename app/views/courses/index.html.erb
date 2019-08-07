@@ -1,0 +1,12 @@
+<% provide(:title, t(:courses)) %>
+<h1> <%= t :courses %> </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <% if admin? %>
+        <%= link_to t(:add_course), new_course_path, class: "btn btn-primary add-link" %>
+      <% end %>
+      <br>
+    </div>
+  </div>
+</div>
