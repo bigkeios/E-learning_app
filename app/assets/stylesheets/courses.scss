@@ -5,3 +5,21 @@
 {
   margin: auto;
 }
+.courses
+{
+  list-style-type: none;
+  li
+  {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+  }
+}
+.course-info
+{
+  float: left;
+}
+.course-edit
+{
+  float: right;
+}

@@ -26,6 +26,8 @@ vi:
   # Course
   courses: "Danh sách khóa học"
   add_course: "Thêm khóa học"
+  about_course: "Về khóa học"
+  edit_course: "Sửa thông tin khóa học"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"

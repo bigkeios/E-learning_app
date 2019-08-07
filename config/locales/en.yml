@@ -43,7 +43,7 @@ en:
   log_out: "Log out"
   new_to_website: "New to the website? "
   create_acc: "Create a new account"
-  edit_acc: "Edit information"
+  edit_acc: "Edit my information"
   delete_acc: "Delete"
   cf_delete_user: "Are you sure you want to delete this user?"
   my_profile: "My profile"
@@ -57,6 +57,8 @@ en:
   # Course
   courses: "Courses"
   add_course: "Add a new course"
+  about_course: "About the course"
+  edit_course: "Edit course information"
 
   # Flashes
   invalid_email_password: "Invalid email or password"
