@@ -1,0 +1,48 @@
+vi:
+  hello: "Xin chào"
+  log_in: "Đăng nhập"
+  sign_up: "Tạo tài khoản"
+  log_out: "Đăng xuất"
+  new_to_website: "Chưa có tài khoản? "
+  create_acc: "Tạo tài khoản"
+  edit_acc: "Sửa thông tin tài khoản"
+  delete_acc: "Xóa tài khoản"
+  cf_delete_user: "Bạn có chắc là muốn xóa tài khoản này?"
+  error: "Có lỗi!"
+  my_profile: "Tài khoản cá nhân"
+  other_user: "Danh sách người dùng"
+  follow: "Theo dõi"
+  unfollow: "Hủy theo dõi"
+  following: "Đang theo dõi"
+  follower: "Được theo dõi"
+  home: "Trang chủ"
+
+  # Flashes
+  invalid_email_password: "Email hoặc mật khẩu không đúng"
+  log_in_first: "Hãy đăng nhập trước"
+  updated_info: "Thông tin đã được cập nhật"
+  not_allowed: "Bạn không đủ quyền truy cập trang vừa yêu cầu"
+
+  # User error flashes
+  no_user: "Không tìm thấy người dùng yêu cầu"
+  delete_user_succ: "Tài khoản đã được xóa"
+  delete_user_fail: "Đã gặp lỗi khi xóa tài khoản"
+
+  will_paginate:
+    previous_label: "&#8592; Trang trước"
+    next_label: "Trang tiếp &#8594;"
+    page_gap: "&hellip;"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+
+  helpers:
+    label:
+      session:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"

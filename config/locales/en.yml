@@ -30,4 +30,36 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello"
+  log_in: "Log in"
+  sign_up: "Sign up"
+  log_out: "Log out"
+  new_to_website: "New to the website? "
+  create_acc: "Create a new account"
+  edit_acc: "Edit information"
+  delete_acc: "Delete"
+  cf_delete_user: "Are you sure you want to delete this user?"
+  error: "Something is wrong"
+  my_profile: "My profile"
+  other_user: "Users list"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "Followings"
+  follower: "Followers"
+  home: "Home"
+
+  # Flashes
+  invalid_email_password: "Invalid email or password"
+  log_in_first: "Please log in first"
+  updated_info: "Updated information"
+  not_allowed: "You are not allowed to access that page"
+
+  # User error flashes
+  no_user: "The specified user does not exist"
+  delete_user_succ: "The user was deleted successfully"
+  delete_user_fail: "There was an error deleting user"
+
+  will_paginate:
+    previous_label: "&#8592; Previous"
+    next_label: "Next &#8594;"
+    page_gap: "&hellip;"
