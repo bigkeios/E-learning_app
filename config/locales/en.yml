@@ -52,6 +52,7 @@ en:
   invalid_email_password: "Invalid email or password"
   log_in_first: "Please log in first"
   updated_info: "Updated information"
+  not_allowed: "You are not allowed to access that page"
 
   # User error flashes
   no_user: "The specified user does not exist"

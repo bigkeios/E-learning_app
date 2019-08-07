@@ -21,6 +21,7 @@ vi:
   invalid_email_password: "Email hoặc mật khẩu không đúng"
   log_in_first: "Hãy đăng nhập trước"
   updated_info: "Thông tin đã được cập nhật"
+  not_allowed: "Bạn không đủ quyền truy cập trang vừa yêu cầu"
 
   # User error flashes
   no_user: "Không tìm thấy người dùng yêu cầu"

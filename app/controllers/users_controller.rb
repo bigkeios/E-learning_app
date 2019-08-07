@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user?, only: %i[show index edit update]
-  before_action :correct_user?, only: %i[edit update]
+  before_action :logged_in_user, only: %i[show index edit update]
+  before_action :correct_user, only: %i[edit update]
   before_action :set_user, only: %i[show edit update destroy]
 
   # GET users/new
@@ -20,12 +20,7 @@ class UsersController < ApplicationController
   end
 
   # GET users/1
-  def show
-    unless @user
-      flash[:danger] = t :no_user
-      redirect_to root_path
-    end
-  end
+  def show; end
 
   # GET users
   def index
@@ -47,8 +42,7 @@ class UsersController < ApplicationController
 
   # DELETE users/1
   def destroy
-    @user.destroy
-    if @user.destroyed?
+    if @user.destroy
       flash[:success] = t :delete_user_succ
     else
       flash[:danger] = t :delete_user_fail
@@ -64,6 +58,9 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find_by(id: params[:id])
-    return unless @user
+    unless @user
+      flash[:danger] = t :no_user
+      redirect_to root_path
+    end
   end
 end

@@ -5,3 +5,5 @@ Style/StringLiterals:
   Enabled: false
 Style/MethodDefParentheses:
   Enabled: false
+Style/GuardClause:
+  Enabled: false
