@@ -1,4 +1,8 @@
 class CoursesController < ApplicationController
+  include SessionsHelper
+  before_action :logged_in_user, only: %i[index new create]
+  before_action :admin_user, only: %i[new create]
+
   # GET /users
   def index; end
 
