@@ -10,5 +10,4 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
     get courses_new_url
     assert_response :success
   end
-
 end

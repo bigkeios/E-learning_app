@@ -47,6 +47,7 @@ en:
   following: "Followings"
   follower: "Followers"
   home: "Home"
+  courses: "Courses"
 
   # Flashes
   invalid_email_password: "Invalid email or password"

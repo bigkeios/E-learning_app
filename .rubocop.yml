@@ -7,3 +7,5 @@ Style/MethodDefParentheses:
   Enabled: false
 Style/GuardClause:
   Enabled: false
+Style/Documentation:
+  Enabled: false

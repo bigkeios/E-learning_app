@@ -1,7 +1,6 @@
 class CoursesController < ApplicationController
   # GET /users
-  def index
-  end
+  def index; end
 
   # GET /users/new
   def new
@@ -19,7 +18,8 @@ class CoursesController < ApplicationController
   end
 
   private
-    def course_params
-      params.require(:course).permit(:name, :desc)
-    end
+
+  def course_params
+    params.require(:course).permit(:name, :desc)
+  end
 end

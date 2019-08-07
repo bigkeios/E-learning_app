@@ -16,6 +16,7 @@ vi:
   following: "Đang theo dõi"
   follower: "Được theo dõi"
   home: "Trang chủ"
+  courses: "Danh sách khóa học"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
