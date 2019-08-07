@@ -30,7 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  # Global
   hello: "Hello"
+  error: "Something is wrong"
+  about: "About"
+  help: "Help"
+  news: "News"
+
+  # User
   log_in: "Log in"
   sign_up: "Sign up"
   log_out: "Log out"
@@ -39,7 +46,6 @@ en:
   edit_acc: "Edit information"
   delete_acc: "Delete"
   cf_delete_user: "Are you sure you want to delete this user?"
-  error: "Something is wrong"
   my_profile: "My profile"
   other_user: "Users list"
   follow: "Follow"
@@ -47,7 +53,10 @@ en:
   following: "Followings"
   follower: "Followers"
   home: "Home"
+
+  # Course
   courses: "Courses"
+  add_course: "Add a new course"
 
   # Flashes
   invalid_email_password: "Invalid email or password"
