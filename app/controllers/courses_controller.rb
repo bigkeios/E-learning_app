@@ -1,8 +1,8 @@
 class CoursesController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, only: %i[index new create show]
-  before_action :set_course, only: %i[show]
-  before_action :admin_user, only: %i[new create]
+  before_action :logged_in_user, only: %i[index show new create edit]
+  before_action :set_course, only: %i[show edit]
+  before_action :admin_user, only: %i[new create edit update]
 
   # GET /courses
   def index
@@ -26,6 +26,9 @@ class CoursesController < ApplicationController
 
   # GET courses/1
   def show; end
+
+  # GET courses/1/edit
+  def edit; end
 
   private
 
