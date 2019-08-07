@@ -6,7 +6,7 @@
         <strong> Email: </strong> <%= @user.email %>
         <br>
         <% if logged_in? %>
-          <% if current_user == @user %>
+          <% if correct_user? %>
             <%= link_to t(:edit_acc), edit_user_path(@user) %>
           <% else %>
             <% if current_user.following?(@user) %>

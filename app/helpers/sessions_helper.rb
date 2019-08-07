@@ -23,16 +23,22 @@ module SessionsHelper
     redirect_to login_path
   end
 
+  def correct_user?
+    User.find_by(id: params[:id]) == current_user
+  end
+
   def correct_user
-    @user = User.find_by(id: params[:id])
-    if @user != current_user
-      flash[:danger] = t :not_allowed
-      redirect_to root_path
-    end
+    return if correct_user?
+    flash[:danger] = t :not_allowed
+    redirect_to root_path
   end
 
   def admin?
-    current_user.admin
+    if logged_in?
+      current_user.admin
+    else
+      false
+    end
   end
 
   def admin_user
