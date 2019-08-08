@@ -7,8 +7,7 @@ class CoursesController < ApplicationController
 
   # GET /courses
   def index
-    @courses = Course.paginate(page: params[:page],
-                                                        per_page: 20)
+    @courses = Course.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /courses/new
@@ -44,7 +43,7 @@ class CoursesController < ApplicationController
 
   # DELETE courses/1
   def destroy
-    if @course.update_attribute :deleted, true
+    if @course.update_attributes(deleted: true)
       flash[:success] = t :delete_course_succ
     else
       flash[:danger] = t :delete_course_fail
