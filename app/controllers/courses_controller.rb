@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, only: %i[index show new create edit]
-  before_action :set_course, only: %i[show edit]
+  before_action :logged_in_user, only: %i[index show new create edit update]
+  before_action :set_course, only: %i[show edit update]
   before_action :admin_user, only: %i[new create edit update]
 
   # GET /courses
@@ -29,6 +29,16 @@ class CoursesController < ApplicationController
 
   # GET courses/1/edit
   def edit; end
+
+  # POST courses/1
+  def update
+    if @course.update_attributes(course_params)
+      flash[:success] = t :updated_info
+      redirect_to course_path(@course)
+    else
+      render :edit
+    end
+  end
 
   private
 

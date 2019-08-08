@@ -36,6 +36,7 @@ en:
   about: "About"
   help: "Help"
   news: "News"
+  edit: "Edit"
 
   # User
   log_in: "Log in"
