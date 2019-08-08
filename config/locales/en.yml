@@ -67,6 +67,7 @@ en:
   # Lesson
   add_lesson: "Add lesson"
   lessons: "Lessons"
+  lesson_objective: "Objective"
 
   # Flashes
   invalid_email_password: "Invalid email or password"
@@ -86,6 +87,7 @@ en:
 
   # Lesson errors flashes
   create_lesson_succ: "The lesson was created successfully"
+  no_lesson: "The specified lesson does not exist"
 
   will_paginate:
     previous_label: "&#8592; Previous"

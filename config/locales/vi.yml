@@ -36,6 +36,7 @@ vi:
   # Lesson
   add_lesson: "Thêm bài học"
   lessons: "Danh sách bài học"
+  lesson_objective: "Mục tiêu"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
@@ -55,6 +56,7 @@ vi:
 
   # Lesson errors flashes
   create_lesson_succ: "Bài học đã được tạo thành công"
+  no_lesson: "Không tìm thấy bài học yêu cầu"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"

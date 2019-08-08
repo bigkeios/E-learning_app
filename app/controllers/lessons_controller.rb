@@ -3,6 +3,7 @@ class LessonsController < ApplicationController
   before_action :logged_in_user, only: %i[new create]
   before_action :admin_user, only: %i[new create]
   before_action :set_course, only: %i[new create]
+  before_action :set_lesson, only: %i[show]
 
   # GET courses/1/lessons/new
   def new
@@ -20,6 +21,9 @@ class LessonsController < ApplicationController
     end
   end
 
+  # GET lessons/1
+  def show; end
+
   private
 
   def lesson_params
@@ -30,6 +34,14 @@ class LessonsController < ApplicationController
     @course = Course.find_by(id: params[:course_id])
     return if @course
     flash[:danger] = t :no_course
+    redirect_to root_path
+  end
+
+  def set_lesson
+    lesson_id = params[:lesson_id] || params[:id]
+    @lesson = Lesson.find_by(id: lesson_id)
+    return if @lesson
+    flash[:danger] = t :no_lesson
     redirect_to root_path
   end
 end
