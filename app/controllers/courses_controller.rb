@@ -1,12 +1,14 @@
 class CoursesController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, only: %i[index show new create edit update]
-  before_action :set_course, only: %i[show edit update]
-  before_action :admin_user, only: %i[new create edit update]
+  before_action :logged_in_user,
+                only: %i[index show new create edit update destroy]
+  before_action :set_course, only: %i[show edit update destroy]
+  before_action :admin_user, only: %i[new create edit update destroy]
 
   # GET /courses
   def index
-    @courses = Course.paginate(page: params[:page], per_page: 20)
+    @courses = Course.where.not(deleted: true).paginate(page: params[:page],
+                                                        per_page: 20)
   end
 
   # GET /courses/new
@@ -40,6 +42,16 @@ class CoursesController < ApplicationController
     end
   end
 
+  # DELETE courses/1
+  def destroy
+    if @course.update_attribute :deleted, true
+      flash[:success] = t :delete_course_succ
+    else
+      flash[:danger] = t :delete_course_fail
+    end
+    redirect_to courses_path
+  end
+
   private
 
   def course_params
@@ -48,5 +60,9 @@ class CoursesController < ApplicationController
 
   def set_course
     @course = Course.find_by(id: params[:id])
+    unless @course
+      flash[:danger] = t :no_course
+      redirect_to root_path
+    end
   end
 end

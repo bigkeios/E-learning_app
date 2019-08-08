@@ -31,6 +31,6 @@ end
 # COURSE
 10.times do
   name = Faker::Lorem.sentence
-  desc = Faker::Lorem.paragraph(sentence_count: 4)
+  desc = Faker::Lorem.paragraph(sentence_count: 5)
   Course.create(name: name, desc: desc)
 end
