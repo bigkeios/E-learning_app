@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
 
   # GET /courses
   def index
-    @courses = Course.where.not(deleted: true).paginate(page: params[:page],
+    @courses = Course.paginate(page: params[:page],
                                                         per_page: 20)
   end
 
@@ -60,9 +60,8 @@ class CoursesController < ApplicationController
 
   def set_course
     @course = Course.find_by(id: params[:id])
-    unless @course
-      flash[:danger] = t :no_course
-      redirect_to root_path
-    end
+    return if @course
+    flash[:danger] = t :no_course
+    redirect_to root_path
   end
 end
