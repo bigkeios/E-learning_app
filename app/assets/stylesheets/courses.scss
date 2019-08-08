@@ -5,3 +5,23 @@
 {
   margin: auto;
 }
+.courses
+{
+  list-style-type: none;
+  float: left;
+  width: 100%;
+  li
+  {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+  }
+}
+.course-info
+{
+  float: left;
+}
+.course-actions
+{
+  float: right;
+}

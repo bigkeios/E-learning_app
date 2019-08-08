@@ -7,6 +7,11 @@
         <%= link_to t(:add_course), new_course_path, class: "btn btn-primary add-link" %>
       <% end %>
       <br>
+      <%= will_paginate @courses, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      <ul class="courses">
+        <%= render @courses %>
+      </ul>
+      <%= will_paginate @courses, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </div>
   </div>
 </div>

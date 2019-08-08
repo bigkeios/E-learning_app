@@ -5,6 +5,8 @@ vi:
   about: "Về chúng tôi"
   help: "Hỗ trợ"
   news: "Tin tức"
+  edit: "Chỉnh sửa"
+  delete: "Xóa"
 
   # User
   log_in: "Đăng nhập"
@@ -26,6 +28,10 @@ vi:
   # Course
   courses: "Danh sách khóa học"
   add_course: "Thêm khóa học"
+  about_course: "Về khóa học"
+  edit_course: "Sửa thông tin khóa học"
+  delete_course: "Xóa khóa học"
+  cf_delete_course: "Bạn có chắc là muốn xóa khóa học này?"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
@@ -37,6 +43,11 @@ vi:
   no_user: "Không tìm thấy người dùng yêu cầu"
   delete_user_succ: "Tài khoản đã được xóa"
   delete_user_fail: "Đã gặp lỗi khi xóa tài khoản"
+
+  # Course error flashes
+  delete_course_succ: "Khóa học đã được xóa"
+  delete_course_fail: "Đã gặp lỗi khi xóa khóa học"
+  no_course: "Không tìm thấy khóa học yêu cầu"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"

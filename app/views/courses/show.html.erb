@@ -1,0 +1,20 @@
+<% provide(:title, @course.name) %>
+<h1> <%= @course.name %> </h1>
+<div class= "container">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="course-actions">
+        <% if admin? %>
+          <%= link_to t(:edit_course), edit_course_path(@course), class: "btn btn-primary" %>
+          <%= link_to(t(:delete_course), course_path(@course), method: 'delete',
+                      class: "btn btn-primary", data: { confirm: t(:cf_delete_course) }) %>
+        <% end %>
+      </div>
+      
+      <div class="course-info">
+        <h3> <%= "#{t :about_course}: " %> </h3>
+        <%= @course.desc %>
+      </div>
+    </div>
+  </div>
+</div>

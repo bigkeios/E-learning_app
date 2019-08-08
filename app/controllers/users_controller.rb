@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   # GET users/1/edit
   def edit; end
 
-  # POST users/1/edit
+  # POST users/1
   def update
     if @user.update_attributes(user_params)
       flash[:success] = t :updated_info
@@ -59,10 +59,9 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find_by(id: params[:id])
-    unless @user
-      flash[:danger] = t :no_user
-      redirect_to root_path
-    end
+    return if @user
+    flash[:danger] = t :no_user
+    redirect_to root_path
   end
 
   def admin_delete
