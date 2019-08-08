@@ -15,6 +15,14 @@
         <h3> <%= "#{t :about_course}: " %> </h3>
         <%= @course.desc %>
       </div>
+      <br>
+      <div class="lessons">
+        <% if admin? %>
+          <%= link_to t(:add_lesson), new_course_lesson_path(@course), 
+                      class: "btn btn-primary add-link" %>
+        <% end %>
+        <%# lessons list go here %>
+      </div>
     </div>
   </div>
 </div>
