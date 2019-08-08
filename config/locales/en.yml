@@ -66,6 +66,7 @@ en:
 
   # Lesson
   add_lesson: "Add lesson"
+  lessons: "Lessons"
 
   # Flashes
   invalid_email_password: "Invalid email or password"

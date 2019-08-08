@@ -13,7 +13,7 @@ class LessonsController < ApplicationController
   def create
     @lesson = @course.lessons.build(lesson_params)
     if @lesson.save
-      flash[:success] = t :create_lesson_succ
+      flash.now[:success] = t :create_lesson_succ
       redirect_to course_path()
     else
       render :new

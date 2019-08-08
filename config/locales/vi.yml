@@ -35,6 +35,7 @@ vi:
 
   # Lesson
   add_lesson: "Thêm bài học"
+  lessons: "Danh sách bài học"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"

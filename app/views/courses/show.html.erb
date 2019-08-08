@@ -15,13 +15,19 @@
         <h3> <%= "#{t :about_course}: " %> </h3>
         <%= @course.desc %>
       </div>
-      <br>
+
       <div class="lessons">
+        <h5> <%= t :lessons %> </h5>
         <% if admin? %>
           <%= link_to t(:add_lesson), new_course_lesson_path(@course), 
-                      class: "btn btn-primary add-link" %>
+                      class: "btn btn-dark add-link" %>
         <% end %>
-        <%# lessons list go here %>
+        <br>
+        <%= will_paginate @lessons, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+          <ul class="lessons-list">
+            <%= render @lessons %>
+          </ul>
+        <%= will_paginate @lessons, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
       </div>
     </div>
   </div>
