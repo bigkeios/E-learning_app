@@ -38,6 +38,9 @@ en:
   news: "News"
   edit: "Edit"
   delete: "Delete"
+  upload_file: "Upload file"
+  file: "File"
+  category: "Category"
 
   # User
   log_in: "Log in"
@@ -71,6 +74,12 @@ en:
   edit_lesson: "Edit lesson"
   cf_delete_lesson: "Are you sure you want to delete this lesson?"
 
+  # Words
+  words: "Words"
+  import_word: "Import words from csv file"
+  file_browse: "Browse your file"
+  category_select: "Select category of the words"
+
   # Flashes
   invalid_email_password: "Invalid email or password"
   log_in_first: "Please log in first"
@@ -92,6 +101,10 @@ en:
   no_lesson: "The specified lesson does not exist"
   delete_lesson_succ: "The lesson was deleted successfully"
   delete_lesson_fail: "Deleting the lesson failed"
+
+  # Word errors flashes
+  word_import_succ: "Words were imported successfully"
+  word_import_fail: "Importing words failed"
 
   will_paginate:
     previous_label: "&#8592; Previous"
