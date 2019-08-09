@@ -1,8 +1,7 @@
 class LessonsController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, only: %i[new create]
-  before_action :admin_user, only: %i[new create]
-  before_action :set_course, only: %i[new create]
+  before_action :logged_in_user, only: %i[new create show]
+  before_action :admin_user, :set_course, only: %i[new create]
   before_action :set_lesson, only: %i[show]
 
   # GET courses/1/lessons/new
