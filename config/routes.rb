@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'lessons/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     resources :users
     resources :user_follows, only: %i[create destroy]
-    resources :courses
+    resources :courses do
+      resources :lessons
+    end
   end
 end

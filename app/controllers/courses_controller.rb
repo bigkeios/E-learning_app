@@ -26,7 +26,9 @@ class CoursesController < ApplicationController
   end
 
   # GET courses/1
-  def show; end
+  def show
+    @lessons = @course.lessons.paginate(page: params[:page], per_page: 20)
+  end
 
   # GET courses/1/edit
   def edit; end

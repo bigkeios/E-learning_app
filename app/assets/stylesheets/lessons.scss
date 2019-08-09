@@ -1,11 +1,12 @@
-// Place all the styles related to the Courses controller here.
+// Place all the styles related to the lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.col-md-10
+.lessons
 {
-  margin: auto;
+  clear: both;
+  margin-top: 50px;
 }
-.courses
+.lessons-list
 {
   list-style-type: none;
   float: left;
@@ -16,13 +17,4 @@
     padding: 10px 0;
     border-bottom: 1px solid gray;
   }
-}
-.course-info
-{
-  float: left;
-  margin-bottom: 50px;
-}
-.course-actions
-{
-  float: right;
 }

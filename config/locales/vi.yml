@@ -33,6 +33,11 @@ vi:
   delete_course: "Xóa khóa học"
   cf_delete_course: "Bạn có chắc là muốn xóa khóa học này?"
 
+  # Lesson
+  add_lesson: "Thêm bài học"
+  lessons: "Danh sách bài học"
+  lesson_objective: "Mục tiêu"
+
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
   log_in_first: "Hãy đăng nhập trước"
@@ -49,6 +54,10 @@ vi:
   delete_course_fail: "Đã gặp lỗi khi xóa khóa học"
   no_course: "Không tìm thấy khóa học yêu cầu"
 
+  # Lesson errors flashes
+  create_lesson_succ: "Bài học đã được tạo thành công"
+  no_lesson: "Không tìm thấy bài học yêu cầu"
+
   will_paginate:
     previous_label: "&#8592; Trang trước"
     next_label: "Trang tiếp &#8594;"
@@ -64,6 +73,15 @@ vi:
       course:
         name: "Tên"
         desc: "Mô tả khóa học"
+      lesson:
+        name: "Tên"
+        objective: "Mục tiêu của bài học"
+    errors:
+      models:
+        lesson:
+          attributes:
+            course:
+              required: "bị thiếu"
 
   helpers:
     label:
