@@ -80,6 +80,7 @@ en:
   file_browse: "Browse your file"
   category_select: "Select category of the words"
   edit_word: "Edit word"
+  cf_delete_word: "Are you sure you want to delete this word?"
 
   # Flashes
   invalid_email_password: "Invalid email or password"
@@ -106,6 +107,8 @@ en:
   # Word errors flashes
   word_import_succ: "Words were imported successfully"
   word_import_fail: "Importing words failed"
+  delete_word_succ: "The word was imported successfully"
+  delete_word_fail: "Deleting the word failed"
 
   will_paginate:
     previous_label: "&#8592; Previous"

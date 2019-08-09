@@ -1,7 +1,8 @@
 class WordsController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, :admin_user, only: %i[index import edit update destroy]
-  before_action :set_word, only: %i[edit update]
+  before_action :logged_in_user, :admin_user,
+                only: %i[index import edit update destroy]
+  before_action :set_word, only: %i[edit update destroy]
   # GET /words
   def index
     @categs = Category.all
@@ -30,6 +31,16 @@ class WordsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  # DELETE /words/1
+  def destroy
+    if @word.update_attributes(deleted: true)
+      flash.now[:success] = t :delete_word_succ
+    else
+      flash.now[:danger] = t :delete_word_fail
+    end
+    redirect_to words_path
   end
 
   private

@@ -50,6 +50,7 @@ vi:
   file_browse: "Chọn file"
   category_select: "Chọn thể loại"
   edit_word: "Sửa thông tin từ"
+  cf_delete_word: "Bạn có chắc là muốn xóa từ này?"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
@@ -76,6 +77,8 @@ vi:
   # Word errors flashes
   word_import_succ: "Load từ từ file thành công"
   word_import_fail: "Đã gặp lỗi khi load từ"
+  delete_word_succ: "Từ đã được xóa"
+  delete_word_fail: "Đã gặp lỗi khi xóa từ"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"
