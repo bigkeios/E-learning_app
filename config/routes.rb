@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :courses do
       resources :lessons, shallow: true
     end
-    resources :words
+    resources :words, only: %i[index]
     resources :words do
       collection { post :import }
     end

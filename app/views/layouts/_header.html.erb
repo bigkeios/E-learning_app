@@ -11,9 +11,11 @@
       <li class="nav-item">
         <%= link_to t(:courses), courses_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <% if admin? %>
+        <li class="nav-item">
         <%= link_to t(:words), words_path, class: "nav-link" %>
       </li>
+      <% end %>
       <li class="nav-item">
         <%= link_to t(:my_profile), user_path(current_user), class: "nav-link" %>
       </li>
