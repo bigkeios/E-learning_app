@@ -79,6 +79,7 @@ en:
   import_word: "Import words from csv file"
   file_browse: "Browse your file"
   category_select: "Select category of the words"
+  edit_word: "Edit word"
 
   # Flashes
   invalid_email_password: "Invalid email or password"

@@ -49,6 +49,7 @@ vi:
   import_word: "Load từ vựng từ file csv"
   file_browse: "Chọn file"
   category_select: "Chọn thể loại"
+  edit_word: "Sửa thông tin từ"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
