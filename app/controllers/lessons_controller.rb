@@ -1,8 +1,9 @@
 class LessonsController < ApplicationController
   include SessionsHelper
-  before_action :logged_in_user, only: %i[new create show]
-  before_action :admin_user, :set_course, only: %i[new create]
-  before_action :set_lesson, only: %i[show edit update]
+  before_action :logged_in_user, only: %i[new create show edit update destroy]
+  before_action :admin_user, only: %i[new create edit update destroy]
+  before_action :set_course, only: %i[new create destroy]
+  before_action :set_lesson, only: %i[show edit update destroy]
 
   # GET courses/1/lessons/new
   def new
@@ -14,7 +15,7 @@ class LessonsController < ApplicationController
     @lesson = @course.lessons.build(lesson_params)
     if @lesson.save
       flash.now[:success] = t :create_lesson_succ
-      redirect_to course_path
+      redirect_to course_path(@course)
     else
       render :new
     end
@@ -34,6 +35,16 @@ class LessonsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  # DELETE lessons/1
+  def destroy
+    if @lesson.update_attributes(deleted: true)
+      flash.now[:success] = t :delete_lesson_succ
+    else
+      flash[:danger] = t :delete_lesson_fail
+    end
+    redirect_to course_path(@course)
   end
 
   private

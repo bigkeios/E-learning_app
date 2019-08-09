@@ -69,6 +69,7 @@ en:
   lessons: "Lessons"
   lesson_objective: "Objective"
   edit_lesson: "Edit lesson"
+  cf_delete_lesson: "Are you sure you want to delete this lesson?"
 
   # Flashes
   invalid_email_password: "Invalid email or password"
@@ -89,6 +90,8 @@ en:
   # Lesson errors flashes
   create_lesson_succ: "The lesson was created successfully"
   no_lesson: "The specified lesson does not exist"
+  delete_lesson_succ: "The lesson was deleted successfully"
+  delete_lesson_fail: "Deleting the lesson failed"
 
   will_paginate:
     previous_label: "&#8592; Previous"

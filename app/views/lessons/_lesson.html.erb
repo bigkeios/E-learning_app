@@ -3,7 +3,13 @@
   <br>
   <% if admin? %>
     <div  class="lesson-actions">
-      <%= link_to t(:edit), edit_lesson_path(lesson) %>
+      <%= link_to t(:edit), edit_lesson_path(lesson) %> | 
+
+      <%= form_for lesson, method: "DELETE" do |f| %>
+        <%= hidden_field_tag :course_id, @course.id %>
+        <%= f.submit(t(:delete), data: { confirm: t(:cf_delete_lesson) },
+                      class: "lesson-delete-button") %>
+      <% end %>
     </div>
   <% end %>
 </li>
