@@ -55,6 +55,7 @@ en:
   following: "Followings"
   follower: "Followers"
   home: "Home"
+  up_file: "Upload file"
 
   # Course
   courses: "Courses"
@@ -92,6 +93,10 @@ en:
   no_lesson: "The specified lesson does not exist"
   delete_lesson_succ: "The lesson was deleted successfully"
   delete_lesson_fail: "Deleting the lesson failed"
+
+  # Categ errors flashes
+  categ_imported_succ: "The categories were imported successfully"
+  categ_imported_fail: "Importing the categories failed"
 
   will_paginate:
     previous_label: "&#8592; Previous"

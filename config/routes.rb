@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'categories/import'
   get 'lessons/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
@@ -15,6 +16,9 @@ Rails.application.routes.draw do
     resources :user_follows, only: %i[create destroy]
     resources :courses do
       resources :lessons, shallow: true
+    end
+    resources :categories do
+      collection { post :import }
     end
   end
 end

@@ -10,6 +10,14 @@
         <h3> <%= "#{t :lesson_objective}: " %> </h3>
         <%= @lesson.objective %>
       </div>
+
+      <div class="lesson-actions">
+        <%= form_tag import_categories_path, multipart: true do %>
+          <%= file_field_tag :file, accept: ".csv" %>
+          <br><br>
+          <%= submit_tag t(:up_file), class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

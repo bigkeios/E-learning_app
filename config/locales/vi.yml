@@ -24,6 +24,7 @@ vi:
   following: "Đang theo dõi"
   follower: "Được theo dõi"
   home: "Trang chủ"
+  up_file: "Tải file lên"
 
   # Course
   courses: "Danh sách khóa học"
@@ -61,6 +62,10 @@ vi:
   no_lesson: "Không tìm thấy bài học yêu cầu"
   delete_lesson_succ: "Bài học đã được xóa"
   delete_lesson_fail: "Đã gặp lỗi khi xóa bài học"
+
+  # Categ errors flashes
+  categ_imported_succ: "Load categ thành công"
+  categ_imported_fail: "Đã có lỗi khi load"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"
