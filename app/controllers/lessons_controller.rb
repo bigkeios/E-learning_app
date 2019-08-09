@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
   include SessionsHelper
   before_action :logged_in_user, only: %i[new create show]
   before_action :admin_user, :set_course, only: %i[new create]
-  before_action :set_lesson, only: %i[show]
+  before_action :set_lesson, only: %i[show edit update]
 
   # GET courses/1/lessons/new
   def new
@@ -23,6 +23,19 @@ class LessonsController < ApplicationController
   # GET lessons/1
   def show; end
 
+  # GET lessons/1/edit
+  def edit; end
+
+  # POST lessons/1
+  def update
+    if @lesson.update_attributes(lesson_params)
+      flash[:success] = t :updated_info
+      redirect_to lesson_path(@lesson)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def lesson_params
@@ -37,7 +50,7 @@ class LessonsController < ApplicationController
   end
 
   def set_lesson
-    lesson_id = params[:lesson_id] || params[:id]
+    lesson_id = params[:id]
     @lesson = Lesson.find_by(id: lesson_id)
     return if @lesson
     flash[:danger] = t :no_lesson

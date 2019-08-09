@@ -1,3 +1,9 @@
 <li>
-  <%= link_to lesson.name, course_lesson_path(lesson) %>
+  <%= link_to lesson.name, lesson_path(lesson) %>
+  <br>
+  <% if admin? %>
+    <div  class="lesson-actions">
+      <%= link_to t(:edit), edit_lesson_path(lesson) %>
+    </div>
+  <% end %>
 </li>

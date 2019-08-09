@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :users
     resources :user_follows, only: %i[create destroy]
     resources :courses do
-      resources :lessons
+      resources :lessons, shallow: true
     end
   end
 end
