@@ -2,6 +2,7 @@ class WordsController < ApplicationController
   # GET /words
   def index
     @categs = Category.all
+    @words = Word.paginate(page: params[:page], per_page: 20)
   end
 
   def import
