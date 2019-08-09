@@ -37,6 +37,8 @@ vi:
   add_lesson: "Thêm bài học"
   lessons: "Danh sách bài học"
   lesson_objective: "Mục tiêu"
+  edit_lesson: "Sửa thông tin bài học"
+  cf_delete_lesson: "Bạn có chắc là muốn xóa bài học này?"
 
   # Flashes
   invalid_email_password: "Email hoặc mật khẩu không đúng"
@@ -57,6 +59,8 @@ vi:
   # Lesson errors flashes
   create_lesson_succ: "Bài học đã được tạo thành công"
   no_lesson: "Không tìm thấy bài học yêu cầu"
+  delete_lesson_succ: "Bài học đã được xóa"
+  delete_lesson_fail: "Đã gặp lỗi khi xóa bài học"
 
   will_paginate:
     previous_label: "&#8592; Trang trước"
