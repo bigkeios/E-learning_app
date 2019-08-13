@@ -3,9 +3,12 @@ class Category < ApplicationRecord
   require 'csv'
   def import_words(file)
     CSV.foreach(file, headers: true) do |row|
-      word = words.build row.to_hash
-      return false unless word.save
+      ActiveRecord::Base.transaction do
+        words.create! row.to_hash
+      end
+      true
+    rescue ActiveRecord::UnknownAttributeError
+      false
     end
-    true
   end
 end
