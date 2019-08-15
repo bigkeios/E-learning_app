@@ -108,6 +108,7 @@ en:
   word_import_succ: "Words were imported successfully"
   word_import_fail: "Importing words failed"
   word_import_fail_check: "Checking the file at line"
+  incorrect_words_file: "File for importing must be csv"
   delete_word_succ: "The word was imported successfully"
   delete_word_fail: "Deleting the word failed"
 

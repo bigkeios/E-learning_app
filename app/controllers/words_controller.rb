@@ -12,12 +12,17 @@ class WordsController < ApplicationController
   # POST /words/import
   def import
     category = Category.find_by(id: params[:word][:category_id])
-    import_word_result = category.import_words(params[:file])
-    if import_word_result.nil?
-      flash[:success] = t :word_import_succ
+    uploaded_file = params[:file]
+    if uploaded_file.content_type != "text/csv"
+      flash[:danger] = t :incorrect_words_file
     else
-      flash[:danger] = "#{t :word_import_fail}. #{t :word_import_fail_check}:\
-       #{import_word_result}"
+      import_word_result = category.import_words(params[:file])
+      if import_word_result.nil?
+        flash[:success] = t :word_import_succ
+      else
+        flash[:danger] = "#{t :word_import_fail}. #{t :word_import_fail_check}:\
+        #{import_word_result}"
+      end
     end
     redirect_to words_path
   end
