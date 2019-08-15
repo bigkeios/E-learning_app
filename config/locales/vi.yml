@@ -77,6 +77,7 @@ vi:
   # Word errors flashes
   word_import_succ: "Load từ từ file thành công"
   word_import_fail: "Đã gặp lỗi khi load từ"
+  word_import_fail_check: "Kiểm tra dòng sau trong file"
   delete_word_succ: "Từ đã được xóa"
   delete_word_fail: "Đã gặp lỗi khi xóa từ"
 
