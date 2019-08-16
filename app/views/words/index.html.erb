@@ -1,0 +1,33 @@
+<% provide :title, t(:words) %>
+<h1>  <%= t :words %> </h1>
+<div class="container">
+  <div class="row">
+    <div class= "col-md-10 offset-md-1">
+      <div class="words-list">
+        <%= will_paginate @words, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+          <ul class="words">
+            <%= render @words %>
+          </ul>
+        <%= will_paginate @words, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      </div>
+      
+      <div class="words-import">
+        <h3> <%= t :import_word %> </h3>
+        <%= form_tag import_words_path, multipart: true do %>
+          <div class="form-group">
+            <%= label_tag t(:file_browse) %>
+            <%= file_field_tag :file, accept: ".csv" %>
+          </div>
+          
+          <div class="form-group">
+            <%= label_tag t(:category_select) %>
+            <%= collection_select(:word, :category_id, @categs, :id, :categ) %>
+          </div>
+          
+          <%= submit_tag t(:upload_file), class: "btn btn-primary"  %>
+        <% end %>
+     </div>
+    </div>
+  </div>
+</div>
+
