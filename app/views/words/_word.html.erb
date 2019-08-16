@@ -1,0 +1,11 @@
+<li>
+  <p> <%= word.word %> </p>
+  <p> <%= word.definition %> </p>
+
+  <div  class="word-actions">
+    <%= link_to t(:edit), edit_word_path(word) %> | 
+
+    <%= link_to(t(:delete), word_path(word), method: 'delete',
+                  data: { confirm: t(:cf_delete_word) }) %>
+  </div>
+</li>
