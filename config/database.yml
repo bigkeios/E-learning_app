@@ -48,7 +48,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: E_learning_app_production
-  username: E_learning_app
-  password: <%= ENV['E_LEARNING_APP_DATABASE_PASSWORD'] %>
+  # <<: *default
+  adapter: mysql2
+  url: mysql2://b5d8263d2e6dfc:b86ad9a8@us-cdbr-iron-east-02.cleardb.net/heroku_95075fc922728b0?reconnect=true
